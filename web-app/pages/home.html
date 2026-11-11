@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeuroLens - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/contrast.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="navbar">
+        <a href="home.html" class="logo">NeuroLens</a>
+        <nav class="nav-links">
+            <a href="home.html" class="active-link home-link">
+                <i data-lucide="home" class="nav-icon"></i>
+                <span>HOME</span>
+            </a>
+            <a href="settings.html" class="settings-link">
+                <i data-lucide="settings" class="nav-icon"></i>
+                <span>SETTINGS</span>
+            </a>
+        </nav>
+    </header>
+
+    <div class="status-bar">
+        <span class="status-dot" id="statusDot"></span>
+        <span id="statusText">Connecting…</span>
+        <button id="retryBtn" onclick="connect()">Retry</button>
+    </div>
+
+    <div class="faces-grid" id="facesContainer"></div>
+
+    <div id="emptyState">
+        <span class="empty-icon">👤</span>
+        <p>No faces detected</p>
+    </div>
+
+    <script src="../emotion_client.js"></script>
+    <script src="../contrast.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
